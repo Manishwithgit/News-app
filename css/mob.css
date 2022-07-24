@@ -1,0 +1,65 @@
+/* navigation */
+#navbar .public{
+    display: none;
+} 
+
+#navbar .diba{
+    
+    grid-template-columns: 1fr;
+    grid-gap: 1.3rem;
+    /* border: 1px solid red; */
+}
+
+#navbar ul,
+#navbar .logo{
+    justify-self: center;
+    /* border: 1px solid red; */
+    
+}
+#navbar ul li a{
+    padding: 0.4rem;
+}
+#homearticle .articlediba{
+    grid-template-columns: repeat(2, 1fr) ;
+}
+
+#homearticle .articlediba > *:first-child,#homearticle .articlediba > *:last-child{
+    grid-template-columns: 1fr;
+    grid-column: 1;
+}
+@media(max-width:600px){
+    /* stack grid items */
+    #socase .socasediba, #homearticle .articlediba, #footid .footdiba{
+        grid-template-columns: 1fr;
+    }
+    #footid .footdiba > *:last-child{
+        grid-column: 1;
+    }
+    /* #footid .footdiba > * {
+        border-bottom: rgb(139, 114, 114) dotted 1px ;
+        padding-bottom: 1rem;
+    }
+    #footid .footdiba > *:last-child,#footid .footdiba > *:nth-child(3),#footid .footdiba > *:nth-child(4){
+        border: none;
+
+    } */
+
+    /* above comment section we can use other tech below.. */
+    #footid .footdiba > *:first-child,#footid .footdiba > *:nth-child(2){
+        border-bottom:rgb(196, 182, 182) dotted 1px ;
+        padding-bottom:1rem ;
+    }
+    .pagediba{
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .pagediba > *:first-child{
+        grid-row: 1;
+    }
+    .aboutheading{
+        font-size: 1.5rem;
+    }
+    .articleheading{
+        font-size: 1.5rem;
+    }
+}

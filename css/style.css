@@ -1,0 +1,341 @@
+:root{
+    --primary-color:rgb(223, 52, 52);
+    --secondary-color:orange; 
+    --light-color:white;
+    --dark-color:#333;
+    --max-width:1100px;  
+}
+
+.diba{
+    --sports-color:rgb(241, 139, 6);
+    --mani-color:#a55bbe;
+    --max-color:#009cff;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    line-height: 2;
+    background: var(--light-color);
+   
+
+}
+a{
+    color: #333;
+    /* we remove underline  text-decoration none */
+    text-decoration: none;
+}
+
+/* unodered list */
+ul{
+    /* remove the bullet points */
+    list-style: none;
+}
+
+p{
+    /*margin top and bottum   */
+    margin: 0.5rem 0;
+}
+
+img {
+    width:100%;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-bottom: .6rem ;
+    line-height: 1.3;
+}
+
+/* Utility part */
+
+.diba{
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 0 1rem;
+    overflow: hidden;
+    /* overflow:visible; */
+}
+/* navigation part........................... */
+
+#navbar{
+    background: rgb(202, 220, 226);
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+#navbar .diba{
+    display: grid;
+    grid-template-columns:  6fr 3fr 2fr;
+    /* grid-template-columns: auto; */
+    padding: 1rem;
+    align-items: center;
+}
+
+#navbar .logo{
+    width: 171px;
+}
+#navbar ul{
+    justify-self: end;
+    display: flex;
+    
+}
+#navbar ul li a{
+    padding: .8rem;
+    font-weight: bold;
+}
+
+/* a.recent have no tabspace,  this part changes upon home text   */
+#navbar ul li a.recent{
+    background: var(--primary-color); 
+    color: white;
+}
+
+#navbar ul li a:hover{
+    background: var(--light-color);
+    color: var(--dark-color);
+}
+
+
+#navbar .public {
+    justify-self:center ;
+}
+#navbar .public i{
+    color: #777;
+    margin-right: .4rem;
+}
+
+/* showcase part.................................... */
+#socase{
+    color: #a5c2d4;
+    background: rgb(26, 16, 16);
+    padding: 2.3rem;
+    position: relative;
+}
+
+#socase:before{
+    content: '';
+    background: url('/image/teams.jpg') no-repeat center center/cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+}
+
+#socase .socasediba{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr) ;
+
+    /* justify content for horizontal */
+    justify-content: center;
+    /* align items for vertical */
+    align-items: center;
+    height: 50vh ;
+}
+
+/* top of the image that text is sports article */
+#socase .socasecontent{
+    z-index: 1;
+}
+
+/* utility shocase part */
+.category{
+    display: inline-block;
+    color: aliceblue;
+     font-size: 0.6rem;
+     /* text convert into uppercase */
+     text-transform: uppercase; 
+     padding: 0.3rem 0.5rem;
+     border-radius: 15px;
+     margin-bottom: 0.6rem ;
+}
+
+.catsport{background: var(--sports-color);}
+.catmusic{background: var(--mani-color);}
+.cattech{background: var(--max-color);}
+.cattech1{background: var(--mani-color);}
+.catplay{background: var(--sports-color);}
+
+
+.button{
+    display: inline-block;
+    border: none;
+    background: var(--dark-color);
+    color: white;
+    padding: 0.4rem 1.2rem;
+}
+
+/* #socase .socasecontent p{
+    margin-bottom: 1rem;
+} */
+
+.buttonprimary{background: var(--primary-color);}
+
+
+.buttonblock{
+    display: block;
+    width: 100%;
+    text-align: center;
+
+}
+
+
+.button:hover{
+    opacity: 0.8;
+}
+
+/* home article section................... */
+.artcard{
+    /* background: gray; */
+    background: #dce4e9;
+    padding: 1rem;
+}
+
+#homearticle .articlediba{
+    display: grid;
+    grid-template-columns:repeat(3, 1fr) ;
+    grid-gap:0.7rem;
+}
+
+/* #homearticle .articlediba article:first-child{} */
+#homearticle .articlediba > *:first-child{
+ display: grid;
+ grid-template-columns: repeat(2,2fr);    grid-gap: 1rem;
+ align-items: center;
+ grid-column: 1 / span 2;
+
+
+}
+
+#homearticle .articlediba > *:first-child,
+#homearticle .articlediba > *:last-child{
+      display: grid;
+      grid-template-columns: repeat(2,1fr);    
+      grid-gap: 0.7rem;
+      align-items: center;
+      grid-column: 1 / span 2;
+}
+#homearticle .articlediba > *:last-child{
+    grid-column: 2/span 2;
+}
+
+.dark{background: var(--dark-color);}
+.music a{ color: white;}
+.music{color: white;}
+
+.poback{background: var(--primary-color);}
+.politics a{color: white;}
+.politics{color: white;}
+
+
+/* footer section.................. */
+#footid{
+    background:var(--dark-color);
+    color: white; 
+    /* border: 2px solid red; */
+}
+
+#footid img{
+    width: 140px;
+}
+#footid a{
+    color: white;
+}
+#footid .footdiba{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1.5rem;
+
+}
+/* spanning last child */
+#footid .footdiba > *:last-child{
+    background: #777;
+    grid-column: 1 /span 4;
+    padding: 0.7rem;
+    text-align: center;
+    /* font-weight: bold; */
+    font-size: 00.9rem;
+}
+.P2{
+    padding: 0.9rem 0;
+}
+#footid .footdiba input[type='email']{
+    width: 91%;
+    padding: .4rem;
+    margin-bottom: 0.4rem;
+    /* border: 1px solid darkorange; */
+
+}
+#footid .footdiba input[type='submit']{
+    width: 91%;
+}
+ 
+.list li{
+    /* padding top and bottom  */
+    padding: 0.7rem 0;
+    /* border-bottom: gray dotted ; */
+    border-bottom: lightgoldenrodyellow 1px dotted;
+    width: 91%;
+
+}
+.list li a:hover{
+    color: rgb(172, 48, 48) !important;
+    /* background: red; */
+}
+
+/* About part.............. */
+
+.asideprime{
+    background: var(--primary-color);
+    color: white;
+}
+
+/*  about page -> inner page grid container */
+.pagediba{
+   display: grid;
+   grid-template-columns: 5fr 2fr;
+   margin: 1.1rem 0;
+   grid-gap: 1rem;
+}
+.pagediba > *:first-child{
+    grid-row: 1 /span 3;
+    /* grid-row: 1 / span 7; */
+}
+.aboutheading{
+    font-size: 2.7rem;
+}
+
+
+/* article part .................... */
+.articleheading{
+    font-size: 2.2rem;
+}
+.articleEnt{background: rgb(105, 52, 9);}
+
+.articleprime{
+    background: rgb(108, 120, 224);
+    color: white;
+}
+
+#articlepage .mate{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgb(224, 208, 208);
+    padding: .3rem;
+    /* font-weight: bold; */
+}
+/* #aticlepage .mate .category{
+    margin-top: .5rem 0;
+} */
+
+.categories ul> *{
+    border-bottom:rgb(68, 41, 41) dashed 1px ;
+}
